@@ -37,11 +37,10 @@
                     <div class="panel-content">
                         <div class="panel-content">
                             <div class="form-group">
-                                <form action="task_15_handler.php" method="post" enctype="multipart/form-data">
-<!--                                <form action="task_15_handler.php" method="post" enctype="multipart/form-data">-->
+                                <form action="">
                                     <div class="form-group">
                                         <label class="form-label" for="simpleinput">Image</label>
-                                        <input type="file" id="simpleinput" name="files[]" class="form-control" multiple>
+                                        <input type="file" id="simpleinput" class="form-control">
                                     </div>
                                     <button class="btn btn-success mt-3">Submit</button>
                                 </form>
@@ -79,7 +78,8 @@
 
                                 foreach ($task as $img) { ?>
                                     <div class="col-md-3 image">
-                                        <img src="img/uploads/<?=$img['image']?>" width="100%">
+                                        <img src="img/uploads/<?= $img['image'] ?>" width="100%">
+                                        <a class="btn btn-danger" href="task_15_1_handler.php?id=<?=$img['id']?>" onclick="confirm('Вы уверены?');">Удалить</a>
                                     </div>
                                 <?php } ?>
                             </div>
