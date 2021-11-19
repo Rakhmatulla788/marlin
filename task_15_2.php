@@ -37,11 +37,11 @@
                     <div class="panel-content">
                         <div class="panel-content">
                             <div class="form-group">
-                                <form action="task_15_handler.php" method="post" enctype="multipart/form-data">
+                                <form action="task_15_2_handler.php" method="post" enctype="multipart/form-data">
 <!--                                <form action="task_15_handler.php" method="post" enctype="multipart/form-data">-->
                                     <div class="form-group">
                                         <label class="form-label" for="simpleinput">Image</label>
-                                        <input type="file" id="simpleinput" name="img" class="form-control">
+                                        <input type="file" id="simpleinput" name="files[]" class="form-control" multiple>
                                     </div>
                                     <button class="btn btn-success mt-3">Submit</button>
                                 </form>
