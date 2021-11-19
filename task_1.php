@@ -48,10 +48,28 @@
                                 </div>
                             </div>
                             <ul id="js-list-msg" class="list-group px-2 pb-2 js-list-filter">
-                                <?php $array = ['Reports' => 'reports file', 'Analytics' => 'analytics graphs', 'Export' => 'export download', 'Storage' => 'storage']; ?>
-                                <?php foreach ($array as $key => $value): ?>
+                                <?php $items = [
+                                    [
+                                        'title' => 'Reports',
+                                        'tags' => 'reports file',
+                                    ],
+                                    [
+                                        'title' => 'Analytics',
+                                        'tags' => 'analytics graphs',
+                                    ],
+                                    [
+                                        'title' => 'Export',
+                                        'tags' => 'export download',
+                                    ],
+                                    [
+                                        'title' => 'Storage',
+                                        'tags' => 'storage'
+                                    ],
+
+                                ]; ?>
+                                <?php foreach ($items as $item): ?>
                                     <li class="list-group-item">
-                                        <span data-filter-tags="<?= $value ?>"><?= $key ?></span>
+                                        <span data-filter-tags="<?= $item['tags'] ?>"><?= $item['title'] ?></span>
                                     </li>
                                 <?php endforeach; ?>
                             </ul>
