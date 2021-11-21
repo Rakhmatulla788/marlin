@@ -35,60 +35,60 @@
             <div class="panel-container show">
                 <div class="panel-content">
                     <?php $array = [
-                        0 => [
-                            'text' => 'My Tasks',
-                            'span' => '130 / 500',
-                            'class' => 'progress-bar bg-fusion-400',
-                            'style' => 65,
-                            'aria-valuenow' => 65,
-                            'aria-valuemin' => 0,
-                            'aria-valuemax' => 100,
+                        [
+                            'title' => 'My Tasks',
+                            'value' => '130 / 500',
+                            'bg' => 'bg-fusion-400',
+                            'width' => '65%',
+                            'valuenow' => '65',
+                            'valuemin' => '0',
+                            'valuemax' => '100',
                         ],
-                        1 => [
-                            'text' => 'Transfered',
-                            'span' => '440 TB',
-                            'class' => 'progress-bar bg-success-500',
-                            'style' => 34,
-                            'aria-valuenow' => 34,
-                            'aria-valuemin' => 0,
-                            'aria-valuemax' => 100,
+                        [
+                            'title' => 'Transfered',
+                            'value' => '440 TB',
+                            'bg' => 'bg-success-500',
+                            'width' => '34%',
+                            'valuenow' => '34',
+                            'valuemin' => '0',
+                            'valuemax' => '100',
                         ],
-                        2 => [
-                            'text' => 'Bugs Squashed',
-                            'span' => '77%',
-                            'class' => 'progress-bar bg-info-400',
-                            'style' => 77,
-                            'aria-valuenow' => 77,
-                            'aria-valuemin' => 0,
-                            'aria-valuemax' => 100,
+                        [
+                            'title' => 'Bugs Squashed',
+                            'value' => '77%',
+                            'bg' => 'bg-info-400',
+                            'width' => '77%',
+                            'valuenow' => '77',
+                            'valuemin' => '0',
+                            'valuemax' => '100',
                         ],
-                        3 => [
-                            'text' => 'User Testing',
-                            'span' => '7 days',
-                            'class' => 'progress progress-sm mb-g',
-                            'style' => 84,
-                            'aria-valuenow' => 84,
-                            'aria-valuemin' => 0,
-                            'aria-valuemax' => 100,
+                        [
+                            'title' => 'User Testing',
+                            'value' => '7 days',
+                            'bg' => 'bg-primary-300',
+                            'width' => '84%',
+                            'valuenow' => '84',
+                            'valuemin' => '0',
+                            'valuemax' => '100',
                         ],
 
                     ];
                     ?>
 
                     <?php foreach ($array as $key): ?>
-                        <div class="d-flex">
-                            <?= $key['text'] ?>
-                            <span class="d-inline-block ml-auto"><?= $key['span'] ?></span>
+                        <div class="d-flex mt-2">
+                            <?= $key['title'] ?>
+                            <span class="d-inline-block ml-auto"><?= $key['value'] ?></span>
                         </div>
                         <div class="progress progress-sm mb-g">
-                            <div class="<?= $key['class'] ?>" role="progressbar" style="width: <?= $key['style'] ?>%;"
-                                 aria-valuenow="<?= $key['aria-valuenow'] ?>"
-                                 aria-valuemin="<?= $key['aria-valuemin'] ?>"
-                                 aria-valuemax="<?= $key['aria-valuemax'] ?>"></div>
+                            <div class="progress-bar <?= $key['bg'] ?>" role="progressbar"
+                                 style="width: <?= $key['width'] ?>;"
+                                 aria-valuenow="<?= $key['valuenow'] ?>"
+                                 aria-valuemin="<?= $key['valuemin'] ?>"
+                                 aria-valuemax="<?= $key['valuemax'] ?>">
+                            </div>
                         </div>
                     <?php endforeach; ?>
-
-
                 </div>
             </div>
         </div>
