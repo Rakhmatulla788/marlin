@@ -38,9 +38,9 @@ session_start();
                             <div class="panel-content">
                                 <div class="form-group">
                                     <div class="alert alert-success fade show" role="alert">
-                                        Здравствуйте, <?php echo $_SESSION['user']; unset($_SESSION['user']); ?>
+                                        Здравствуйте, <?php echo $_SESSION['user']; ?>
                                     </div>
-                                    <a href="task_14.php" class="btn btn-info">Выйти</a>
+                                    <a href="task_14_1_handler.php" class="btn btn-info">Выйти</a>
                                 </div>
                             </div>
                         </div>
